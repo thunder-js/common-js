@@ -1,0 +1,30 @@
+{
+  "name": "@thunder-js/common-js",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc --watch",
+    "test:watch": "jest --watch",
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/jest": "^22.1.2",
+    "jest": "^22.3.0",
+    "ts-jest": "^22.0.4",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}
