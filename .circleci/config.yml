@@ -42,25 +42,24 @@ jobs:
           at: ~/repo
       - run: yarn test
 
-  publish:
+  release:
     <<: *defaults
     steps:
       - checkout
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc    
       - attach_workspace:
           at: ~/repo
-      - run: ls
-      - run: npm publish --access=public
+      - run: npm run semantic-release
 
 workflows:
   version: 2
-  build-test-publish:
+  build-test-release:
     jobs:
       - build
       - test:
           requires:
             - build
-      - publish:
+      - release:
           requires:
             - test
           filters:
