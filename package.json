@@ -18,6 +18,8 @@
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^1.0.1",
+    "@semantic-release/git": "^3.0.1",
     "@types/jest": "^22.1.2",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
@@ -58,7 +60,11 @@
       "@semantic-release/npm",
       {
         "path": "@semantic-release/git",
-        "assets": ["package.json", "dist/**/*.{js|css}", "docs"],
+        "assets": [
+          "package.json",
+          "dist/**/*.{js|css}",
+          "docs"
+        ],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       },
       "@semantic-release/github"
