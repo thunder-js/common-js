@@ -1,7 +1,8 @@
 {
   "name": "@thunder-js/common-js",
   "version": "0.0.3",
-  "main": "dist/index.js",
+  "main": "dist/index",
+  "typings": "dist/index",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
