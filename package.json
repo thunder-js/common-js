@@ -5,12 +5,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsc --watch",
+    "commit": "git-cz",
     "test": "jest",
     "test:watch": "jest --watch",
     "build": "tsc -p ."
   },
   "devDependencies": {
     "@types/jest": "^22.1.2",
+    "cz-conventional-changelog": "^2.1.0",
     "jest": "^22.3.0",
     "ts-jest": "^22.0.4",
     "tslint": "^5.9.1",
@@ -27,5 +29,10 @@
       "js",
       "json"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
