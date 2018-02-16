@@ -44,11 +44,9 @@ jobs:
 
   publish:
     <<: *defaults
-    dependencies:
-      pre:
-        - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc    
     steps:
       - checkout
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc    
       - attach_workspace:
           at: ~/repo
       - run: npm publish --access=public
