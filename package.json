@@ -6,6 +6,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">=8.3"
+  },
   "scripts": {
     "dev": "tsc --watch",
     "commit": "git-cz",
