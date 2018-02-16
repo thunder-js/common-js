@@ -30,9 +30,9 @@ jobs:
         
       - run: yarn build
       - persist_to_workspace: 
-        root: ~/repo
-        paths:
-          - dist
+          root: ~/repo
+          paths:
+            - dist
   test:
     <<: *defaults
     steps:
