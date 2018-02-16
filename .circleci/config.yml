@@ -49,6 +49,7 @@ jobs:
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc    
       - attach_workspace:
           at: ~/repo
+      - run: ls
       - run: npm publish --access=public
 
 workflows:
